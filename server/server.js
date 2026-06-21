@@ -7,6 +7,7 @@ import { clerkMiddleware } from "@clerk/express";
 import { serve } from "inngest/express";
 import {inngest, functions} from './Inngest/index.js'
 import userRouter from './routes/userRoutes.js';
+import postRouter from './routes/postRoutes.js';
 
 const app = express();
 
@@ -20,6 +21,7 @@ app.use(clerkMiddleware())
 app.get('/', (req, res) => res.send('Server is running')) //home route
 app.use("/api/inngest", serve({ client: inngest, functions }));
 app.use('/api/user', userRouter)
+app.use('/api/post', postRouter)
 
 
 const PORT = process.env.PORT || 4000;
