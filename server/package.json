@@ -13,12 +13,14 @@
   "description": "",
   "dependencies": {
     "@clerk/express": "^2.1.15",
+    "@imagekit/nodejs": "^7.8.0",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "inngest": "^4.3.0",
     "mongoose": "^9.6.1",
-    "multer": "^2.1.1"
+    "multer": "^2.1.1",
+    "nodemailer": "^9.0.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
